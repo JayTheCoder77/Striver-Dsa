@@ -2,17 +2,15 @@ int floorSqrt(int n) {
   // Write your code here.
   int low = 1;
   int high = n;
-  int ans = 1;
   while (low <= high) {
-    int mid = (low + high) / 2;
-    if (mid * mid >= n) {
-        ans = mid;
-      high = mid - 1;
-    } else if (mid * mid <= n) {
-        ans = mid;
-      low = mid + 1;
+    long long mid = (low + high) / 2;
+    long long val = (mid * mid);
+    if (val <= n){
+        low = mid + 1;
+    } else {
+        high = mid - 1;
     }
   }
-  return ans;
+    return high;
 }
-tc = o(logn) base2
+tc = o(logn)  base2
