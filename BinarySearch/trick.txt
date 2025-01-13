@@ -1,1 +1,4 @@
 apply binary search whenever there is a range of answers to a question
+
+
+whenever least is asked apply bs on answers
