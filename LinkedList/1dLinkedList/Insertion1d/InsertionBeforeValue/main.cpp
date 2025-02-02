@@ -33,15 +33,37 @@ Node* convertArrtoLL(vector<int>&arr){
     return head;
     }
 
-Node * insertHead(Node *head , int val) {
+Node * insertBeforeValue(Node *head , int val , int k) {
     // Write your code here.
-    return new Node(val , head);
+    if(head == nullptr){
+       return nullptr;
+    }
+    if(head -> data == k) return new Node(val,head);
+    Node* temp = head;
+    while(temp != nullptr){
+        if(temp -> next -> data == k){
+            Node* toInsert = new Node(val , temp -> next);
+            temp -> next = toInsert;
+            break;
+        }
+        temp = temp -> next;
+    }
+    return head;
+}
+
+void traverseLL(Node* head){
+    Node* temp = head;
+    while(temp){ // while(temp->next != nullptr)
+        cout << temp->data << endl;
+        temp = temp -> next;
+    }
+    cout << "Null" << endl;
 }
 
 int main(){
-    vector<int> arr = {2,3,4,2};
+    vector<int> arr = {2,3,4,7};
     Node* head = convertArrtoLL(arr);
-    head = insertHead(head,100);
-    cout << head -> data << endl;
+    head = insertBeforeValue(head,100,7);
+    traverseLL(head);
     return 0;
 }
