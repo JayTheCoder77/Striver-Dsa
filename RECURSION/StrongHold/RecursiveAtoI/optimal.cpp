@@ -41,3 +41,6 @@ int createAtoi(string s) {
     // call recursive helper with bounds
     return helper(s , start , i - 1, isNegative);
 }
+
+tc = o(n)
+sc - o(n)
