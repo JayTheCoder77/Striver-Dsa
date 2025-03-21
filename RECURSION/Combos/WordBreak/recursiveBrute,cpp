@@ -1,0 +1,26 @@
+optimal is dp 
+recurison is brute
+
+#include <bits/stdc++.h> 
+bool Try(unordered_set < string > & arr, int n, string & target , int ind){
+    if(ind >= target.length()){
+        return true;
+    }
+    if(arr.find(target) != arr.end()) return true;
+    for(int l = 1 ; l <= target.length()-ind ; l++){
+        string temp = target.substr(ind,l);
+        if((arr.find(temp) != arr.end()) && Try(arr,n,target,ind+l)) return true;
+    }
+    return false;
+}
+bool wordBreak(vector < string > & arr, int n, string & target) {
+    // Write your code here.
+    unordered_set<string> st;
+    for(auto s : arr){
+        st.insert(s);
+    }
+    return Try(st,n,target,0);
+}
+
+tc = o(2^n * n) extra n for substr
+sc = o(n)
