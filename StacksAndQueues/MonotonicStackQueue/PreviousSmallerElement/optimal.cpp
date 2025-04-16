@@ -1,6 +1,6 @@
 // smallest element to left
 #include <bits/stdc++.h>
-vector<int> nextSmallerElement(vector<int> &arr, int n)
+vector<int> previousSmallerElement(vector<int> &arr, int n)
 {
     // Write your code here.
     stack<int> s;
