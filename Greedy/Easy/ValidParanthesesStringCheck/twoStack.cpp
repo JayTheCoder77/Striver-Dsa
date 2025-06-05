@@ -12,7 +12,7 @@ bool checkValidString(string &s){
                 s2.push(index);
             }
             else if(c == ')'){
-                if(!s1.empty()) s1.pop();
+                if(!s1.empty()) s1.pop();gi
                 else if(!s2.empty()) s2.pop();
                 else return false;
             }
