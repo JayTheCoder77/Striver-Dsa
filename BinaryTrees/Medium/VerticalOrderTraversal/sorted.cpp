@@ -9,6 +9,16 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
+ nodes map
+
+{
+  -1: {1: {9}},
+   0: {0: {3}, 2: {15}},
+   1: {1: {20}},
+   2: {2: {7}}
+}
+
 class Solution {
 public:
     vector<vector<int>> verticalTraversal(TreeNode* root) {
@@ -38,6 +48,12 @@ public:
         return ans;
     }
 };
+
+tc = o(nlogn) -due to multiset logn
+sc = o(n)
+
+
+
 
 
 
