@@ -1,3 +1,8 @@
+// for before - you just push all the right
+// as right node left - reverse inorder - sorted in descending order
+// you can find this logic in two sum 4 bst
+
+
 class BSTIterator {
 public:
     // naive - store inorder
