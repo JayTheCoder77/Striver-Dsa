@@ -1,0 +1,15 @@
+understand a dp problem
+
+- count total num of ways
+- find the min / max out of many ways
+- try all possible ways -> count all ways or the best ways
+
+
+recursion - all possible ways
+
+
+shortcut - 
+1. try to represent the problem in terms of indexes
+2. do all possible stuff on the indexes according to the problem statement
+3. sum of all stuffs -> count all ways
+   min(of all stuffs) -> find min
