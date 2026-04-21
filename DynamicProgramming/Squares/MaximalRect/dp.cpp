@@ -1,5 +1,6 @@
 class Solution {
 public:
+    // histogram problem + dp
     int largestRectangleArea(vector<int>& heights) {
             stack<int> s;
             int maxArea = 0;
